@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfySkill - Login</title>
+    <style>
+        /* Minimal CSS Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Base Styles */
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --white: #ffffff;
+            --black: #1a1a2e;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(26, 26, 46, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            position: relative;
+            animation: zoomIn 0.3s ease;
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--gray);
+            cursor: pointer;
+        }
+        
+        .modal-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .modal-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--black);
+        }
+        
+        .modal-header p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        /* Form Styles */
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s ease;
+        }
+        
+        .form-group input:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+        }
+        
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+        }
+        
+        .remember-me input {
+            margin-right: 8px;
+        }
+        
+        .forgot-password {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .modal-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        .link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .modal-content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Modal -->
+    <div class="modal-overlay active" id="loginModal">
+        <div class="modal-content">
+      
+            <div class="modal-header">
+                <div class="logo" >
+                    <span>InfySkill</span>
+                </div>
+                <h2>Welcome Back</h2>
+                <p>Enter your credentials to access your account</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="button" class="password-toggle">👁️</button>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+
+            <div class="modal-footer">
+                <p>Don't have an account? <a href="#" id="showRegister" class="link">Register</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div class="logo">
+                    <span>InfySkill</span>
+                </div>
+                <h2>Create Account</h2>
+                <p>Join InfySkill to start learning</p>
+            </div>
+
+            <form id="registerForm">
+                <div class="form-group">
+                    <input type="text" id="regName" placeholder="Full Name" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="regEmail" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="regPassword" placeholder="Password" minlength="8" required>
+                    <button type="button" class="password-toggle">👁️</button>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="regConfirmPassword" placeholder="Confirm Password" required>
+                    <button type="button" class="password-toggle">👁️</button>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+
+            <div class="modal-footer">
+                <p>Already have an account? <a href="#" id="showLogin" class="link">Login</a></p>
+            </div>
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script>
+        // DOM Elements
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        const showRegister = document.getElementById('showRegister');
+        const showLogin = document.getElementById('showLogin');
+        const closeButtons = document.querySelectorAll('.modal-close');
+        
+        // Password toggle functionality
+        document.querySelectorAll('.password-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    this.textContent = '👁️';
+                } else {
+                    input.type = 'password';
+                    this.textContent = '👁️';
+                }
+            });
+        });
+        
+        // Switch between login and register modals
+        showRegister.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.classList.remove('active');
+            registerModal.classList.add('active');
+        });
+        
+        showLogin.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerModal.classList.remove('active');
+            loginModal.classList.add('active');
+        });
+        
+        // Close modals only via close button
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.closest('.modal-overlay').classList.remove('active');
+            });
+        });
+        
+        // Form submissions
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+           
+        });
+        
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+        });
+        
+        // Show login modal by default
+        loginModal.classList.add('active');
+         // Your Firebase configuration
+  const firebaseConfig = {
+apiKey: "AIzaSyC37a_DE1Xy9Pck-0NVGe_vZehFoIyZo_E",
+
+  authDomain: "companyproject-eb5ee.firebaseapp.com",
+
+  projectId: "companyproject-eb5ee",
+
+  storageBucket: "companyproject-eb5ee.firebasestorage.app",
+
+  messagingSenderId: "629492390862",
+
+  appId: "1:629492390862:web:e9f0ac81c2541a9ae8299f",
+
+  measurementId: "G-FW7K0TFCZ2"
+
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // Registration Function
+async function registerUser(email, password, name) {
+  try {
+    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+    // Update user profile with name
+    await userCredential.user.updateProfile({
+      displayName: name
+    });
+   
+    window.location.href = "/"; // Redirect after registration
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+// Login Function
+async function loginUser(email, password) {
+  try {
+    await firebase.auth().signInWithEmailAndPassword(email, password);
+    // Redirect to index page after successful login
+    window.location.href = "/"; // Redirect after login
+  } catch (error) {
+    alert("User not found. Please register first.");
+  }
+}
+
+// Attach to your forms
+document.getElementById('registerForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('regName').value;
+  const email = document.getElementById('regEmail').value;
+  const password = document.getElementById('regPassword').value;
+  registerUser(email, password, name);
+});
+
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+  loginUser(email, password);
+});
+    </script>
+</body>
+</html>

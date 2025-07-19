@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate - InfySkill</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">InfySkill</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Learn With Us <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="courses">Our Courses</a></li>
+                        <li><a href="workshops">Our Workshops</a></li>
+                        <li><a href="webinars">Our Webinars</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects">Final Year Projects</a></li>
+                <li><a href="verify" class="active">Verify Certificate</a></li>
+                <li><a href="careers">Careers</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                      <li><a href="login" class="btn btn-login" id="loginBtn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Verify Hero -->
+    <section class="verify-hero">
+        <div class="container">
+            <h1>Verify Certificate</h1>
+            <p>Check the authenticity of InfySkill certificates</p>
+        </div>
+    </section>
+
+    <!-- Verification Form -->
+    <section class="verification-form">
+        <div class="container">
+            <div class="form-container">
+                <form id="certificateForm">
+                    <div class="form-group">
+                        <label for="certificateId">Certificate ID</label>
+                        <input type="text" id="certificateId" name="certificateId" placeholder="Enter your certificate ID" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verify Certificate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verification Result -->
+    <section class="verification-result" id="verificationResult" style="display: none;">
+        <div class="container">
+            <div class="result-container">
+                <div class="result-header">
+                    <h2>Certificate Verified Successfully</h2>
+                    <p>The certificate is authentic and issued by InfySkill</p>
+                </div>
+                <div class="certificate-details">
+                    <div class="certificate-image">
+                        <img src="https://via.placeholder.com/400x280?text=Certificate+Preview" alt="Certificate Preview">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Certificate Details</h3>
+                        <ul>
+                            <li><strong>Certificate ID:</strong> <span id="resultId">INFY-2025-12345</span></li>
+                            <li><strong>Name:</strong> <span id="resultName">Aman Sharma</span></li>
+                            <li><strong>Course:</strong> <span id="resultCourse">Full Stack Web Development</span></li>
+                            <li><strong>Completion Date:</strong> <span id="resultDate">June 15, 2025</span></li>
+                            <li><strong>Status:</strong> <span class="status-valid">Valid</span></li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary" id="downloadBtn"><i class="fas fa-download"></i> Download Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invalid Result -->
+    <section class="verification-result invalid" id="invalidResult" style="display: none;">
+        <div class="container">
+            <div class="result-container">
+                <div class="result-header">
+                    <h2>Certificate Not Found</h2>
+                    <p>The certificate ID you entered is not valid</p>
+                </div>
+                <div class="certificate-info">
+                    <p>Please check the certificate ID and try again. If you believe this is an error, please contact our support team.</p>
+                    <a href="contact" class="btn btn-secondary">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Verify Section -->
+    <section class="why-verify">
+        <div class="container">
+            <h2 class="section-title">Why Verify Certificates?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Authenticity Check</h3>
+                    <p>Ensure the certificate is genuine and issued by InfySkill.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Employer Verification</h3>
+                    <p>Employers can verify candidate credentials during hiring.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academic Records</h3>
+                    <p>Educational institutions can validate course completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>InfySkill</h3>
+                    <p>Empowering students with industry-relevant skills to build successful careers in technology.</p>
+                <div class="social-links">
+                        <a href="https://www.facebook.com/share/18pPpK4Fqe/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaLkBaU3LdQdb07EJs2D"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/infyskill-edutech/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infyskill_edutech?igsh=MmNzMWRzeGMxaHA3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@infyskill_edutech?si=cP0JuKxSKuO-zLFF"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="courses">Courses</a></li>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+         
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="verify.html">Verify Certificate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                   <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</li>
+                        <li><i class="fas fa-phone"></i> +91 9080087187</li>
+                        <li><i class="fas fa-phone"></i> +91 9347140822</li>
+                        <li><i class="fas fa-envelope"></i>  infyskilledutech@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 InfySkill. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

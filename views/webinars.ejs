@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Webinars - InfySkill</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+        
+            <a href="/" class="logo">InfySkill</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Learn With Us <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="courses">Our Courses</a></li>
+                        <li><a href="workshops">Our Workshops</a></li>
+                        <li><a href="webinars" class="active">Our Webinars</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects">Final Year Projects</a></li>
+                <li><a href="verify">Verify Certificate</a></li>
+                <li><a href="careers">Careers</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                      <li><a href="login" class="btn btn-login" id="loginBtn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Webinars Hero -->
+    <section class="webinars-hero">
+        <div class="container">
+            <h1>Our Webinars</h1>
+            <p>Free learning sessions from industry experts</p>
+        </div>
+    </section>
+
+    <!-- Featured Webinar -->
+    <section class="featured-webinar">
+        <div class="container">
+            <h2 class="section-title">Featured Webinar</h2>
+            <div class="featured-content">
+                <div class="webinar-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UwlLV3Sumnc?si=tqv9rQVK02gFjaRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="webinar-details">
+                    <h3>The Future of AI in Everyday Applications</h3>
+                    <p class="webinar-meta"><i class="fas fa-calendar-alt"></i> June 5, 2023 | <i class="fas fa-clock"></i> 60 min</p>
+                    <p class="webinar-desc">Join our expert panel as they discuss how artificial intelligence is transforming industries and creating new opportunities. Learn about practical applications of AI that you can implement in your projects.</p>
+                    <div class="webinar-speaker">
+                        <img src="./images/webinar.png" alt="Speaker">
+                        <div>
+                            <h4>Dr. Sanjay Mehta</h4>
+                            <p>AI Researcher, Tech Innovations</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Register for Next Webinar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Webinars -->
+    <section class="upcoming-webinars">
+        <div class="container">
+            <h2 class="section-title">Upcoming Webinars</h2>
+            <div class="webinar-cards">
+                <div class="webinar-card">
+                    <div class="webinar-date">
+                        <span class="day">18</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="webinar-content">
+                        <h3>Blockchain Technology Explained</h3>
+                        <p class="webinar-meta"><i class="fas fa-clock"></i> 7:00 PM - 8:30 PM IST</p>
+                        <p>Understand the fundamentals of blockchain, cryptocurrencies, and smart contracts.</p>
+                        <a href="#" class="btn btn-secondary">Register Now</a>
+                    </div>
+                </div>
+                <div class="webinar-card">
+                    <div class="webinar-date">
+                        <span class="day">25</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="webinar-content">
+                        <h3>Career in Cloud Computing</h3>
+                        <p class="webinar-meta"><i class="fas fa-clock"></i> 6:30 PM - 8:00 PM IST</p>
+                        <p>Learn about career paths, required skills, and certifications in cloud computing.</p>
+                        <a href="#" class="btn btn-secondary">Register Now</a>
+                    </div>
+                </div>
+                <div class="webinar-card">
+                    <div class="webinar-date">
+                        <span class="day">02</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="webinar-content">
+                        <h3>UI/UX Design for Developers</h3>
+                        <p class="webinar-meta"><i class="fas fa-clock"></i> 5:00 PM - 6:30 PM IST</p>
+                        <p>Essential design principles every developer should know to create better applications.</p>
+                        <a href="#" class="btn btn-secondary">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Webinars -->
+    <section class="past-webinars">
+        <div class="container">
+            <h2 class="section-title">Past Webinars</h2>
+            <div class="past-webinar-grid">
+                <div class="past-webinar-card">
+                    <div class="webinar-thumbnail">
+                        <img src="./images/image1.jpg" alt="Webinar">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="webinar-info">
+                        <h3>Data Science Career Paths</h3>
+                        <p class="webinar-meta"><i class="fas fa-calendar-alt"></i> May 28, 2023</p>
+                    </div>
+                </div>
+                <div class="past-webinar-card">
+                    <div class="webinar-thumbnail">
+                        <img src="./images/image2.png" alt="Webinar">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="webinar-info">
+                        <h3>Cybersecurity Essentials</h3>
+                        <p class="webinar-meta"><i class="fas fa-calendar-alt"></i> May 14, 2023</p>
+                    </div>
+                </div>
+                <div class="past-webinar-card">
+                    <div class="webinar-thumbnail">
+                        <img src="./images/image3.jpg" alt="Webinar">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="webinar-info">
+                        <h3>Modern Web Development Trends</h3>
+                        <p class="webinar-meta"><i class="fas fa-calendar-alt"></i> April 30, 2023</p>
+                    </div>
+                </div>
+                <div class="past-webinar-card">
+                    <div class="webinar-thumbnail">
+                        <img src="./images/image1.jpg" alt="Webinar">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="webinar-info">
+                        <h3>Flutter vs React Native</h3>
+                        <p class="webinar-meta"><i class="fas fa-calendar-alt"></i> April 16, 2023</p>
+                    </div>
+                </div>
+                <div class="past-webinar-card">
+                    <div class="webinar-thumbnail">
+                        <img src="./images/image5.png" alt="Webinar">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="webinar-info">
+                        <h3>IoT for Beginners</h3>
+                        <p class="webinar-meta"><i class="fas fa-calendar-alt"></i> March 28, 2023</p>
+                    </div>
+                </div>
+                <div class="past-webinar-card">
+                    <div class="webinar-thumbnail">
+                        <img src="./images/image1.jpg" alt="Webinar">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="webinar-info">
+                        <h3>AWS Certification Guide</h3>
+                        <p class="webinar-meta"><i class="fas fa-calendar-alt"></i> March 12, 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn btn-primary">View All Webinars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Webinar Benefits -->
+    <section class="webinar-benefits">
+        <div class="container">
+            <h2 class="section-title">Why Attend Our Webinars?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Learn from Experts</h3>
+                    <p>Gain insights from industry professionals with years of experience.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Free of Cost</h3>
+                    <p>All our webinars are completely free to attend.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>E-Certificate</h3>
+                    <p>Receive a participation certificate for your profile.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Q&A Session</h3>
+                    <p>Get your questions answered by the experts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>InfySkill</h3>
+                    <p>Empowering students with industry-relevant skills to build successful careers in technology.</p>
+                  <div class="social-links">
+                        <a href="https://www.facebook.com/share/18pPpK4Fqe/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaLkBaU3LdQdb07EJs2D"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/infyskill-edutech/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infyskill_edutech?igsh=MmNzMWRzeGMxaHA3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@infyskill_edutech?si=cP0JuKxSKuO-zLFF"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="courses">Courses</a></li>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact">Contact Us</a></li>
+         
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="verify">Verify Certificate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                     <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</li>
+                        <li><i class="fas fa-phone"></i> +91 9080087187</li>
+                        <li><i class="fas fa-phone"></i> +91 9347140822</li>
+                        <li><i class="fas fa-envelope"></i>  infyskilledutech@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 InfySkill. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

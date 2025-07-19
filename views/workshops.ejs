@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Workshops - InfySkill</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">InfySkill</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#" class="active">Learn With Us <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="courses">Our Courses</a></li>
+                        <li><a href="workshops" class="active">Our Workshops</a></li>
+                        <li><a href="webinars">Our Webinars</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects">Final Year Projects</a></li>
+                <li><a href="verify">Verify Certificate</a></li>
+                <li><a href="careers">Careers</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                      <li><a href="login" class="btn btn-login" id="loginBtn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Workshops Hero -->
+    <section class="workshops-hero">
+        <div class="container">
+            <h1>Our Workshops</h1>
+            <p>Hands-on learning experiences to boost your skills in a short time</p>
+        </div>
+    </section>
+
+    <!-- Upcoming Workshops -->
+    <section class="upcoming-workshops">
+        <div class="container">
+            <h2 class="section-title">Upcoming Workshops</h2>
+            <div class="workshop-cards">
+                <div class="workshop-card">
+                    <div class="workshop-date">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>React JS Fundamentals</h3>
+                        <p class="workshop-meta"><i class="fas fa-clock"></i> 2 Days (10AM - 4PM)</p>
+                        <p class="workshop-desc">Learn the core concepts of React including components, state, props, hooks, and routing through hands-on exercises.</p>
+                        <div class="workshop-actions">
+                            <a href="#" class="btn btn-primary">Register Now</a>
+                            <span class="workshop-price">₹999</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="workshop-card">
+                    <div class="workshop-date">
+                        <span class="day">22</span>
+                        <span class="month">Jun</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>Python for Data Analysis</h3>
+                        <p class="workshop-meta"><i class="fas fa-clock"></i> 1 Day (9AM - 5PM)</p>
+                        <p class="workshop-desc">Master Pandas, NumPy, and Matplotlib for effective data manipulation, analysis, and visualization.</p>
+                        <div class="workshop-actions">
+                            <a href="#" class="btn btn-primary">Register Now</a>
+                            <span class="workshop-price">₹799</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="workshop-card">
+                    <div class="workshop-date">
+                        <span class="day">05</span>
+                        <span class="month">Jul</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="workshop-content">
+                        <h3>UI/UX Design Principles</h3>
+                        <p class="workshop-meta"><i class="fas fa-clock"></i> 2 Days (11AM - 3PM)</p>
+                        <p class="workshop-desc">Understand user-centered design, wireframing, prototyping, and usability testing techniques.</p>
+                        <div class="workshop-actions">
+                            <a href="#" class="btn btn-primary">Register Now</a>
+                            <span class="workshop-price">₹1299</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Workshops -->
+    <section class="past-workshops">
+        <div class="container">
+            <h2 class="section-title">Past Workshops</h2>
+            <div class="workshop-grid">
+                <div class="past-workshop-card">
+                    <img src="https://source.unsplash.com/random/400x250/?coding" alt="Workshop">
+                    <div class="past-workshop-content">
+                        <h3>Web Development Bootcamp</h3>
+                        <p class="workshop-meta"><i class="fas fa-calendar-alt"></i> 10-12 May 2023</p>
+                        <p>Intensive 3-day workshop covering HTML, CSS, JavaScript, and basic backend concepts.</p>
+                        <a href="#" class="btn btn-secondary">View Photos</a>
+                    </div>
+                </div>
+                <div class="past-workshop-card">
+                    <img src="https://source.unsplash.com/random/400x250/?machine,learning" alt="Workshop">
+                    <div class="past-workshop-content">
+                        <h3>Introduction to Machine Learning</h3>
+                        <p class="workshop-meta"><i class="fas fa-calendar-alt"></i> 24 April 2023</p>
+                        <p>Hands-on session covering basic ML algorithms and their implementation using Python.</p>
+                        <a href="#" class="btn btn-secondary">View Photos</a>
+                    </div>
+                </div>
+                <div class="past-workshop-card">
+                    <img src="https://source.unsplash.com/random/400x250/?mobile,app" alt="Workshop">
+                    <div class="past-workshop-content">
+                        <h3>Flutter App Development</h3>
+                        <p class="workshop-meta"><i class="fas fa-calendar-alt"></i> 15 March 2023</p>
+                        <p>Learn cross-platform mobile app development using Flutter framework.</p>
+                        <a href="#" class="btn btn-secondary">View Photos</a>
+                    </div>
+                </div>
+                <div class="past-workshop-card">
+                    <img src="https://source.unsplash.com/random/400x250/?cyber,security" alt="Workshop">
+                    <div class="past-workshop-content">
+                        <h3>Ethical Hacking Basics</h3>
+                        <p class="workshop-meta"><i class="fas fa-calendar-alt"></i> 28 February 2023</p>
+                        <p>Introduction to cybersecurity concepts and ethical hacking techniques.</p>
+                        <a href="#" class="btn btn-secondary">View Photos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Benefits -->
+    <section class="workshop-benefits">
+        <div class="container">
+            <h2 class="section-title">Why Attend Our Workshops?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Hands-on Learning</h3>
+                    <p>Practical exercises and real-world projects to reinforce concepts.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with years of experience.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certification</h3>
+                    <p>Receive a participation certificate to add to your profile.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Networking</h3>
+                    <p>Connect with like-minded peers and industry experts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>InfySkill</h3>
+                    <p>Empowering students with industry-relevant skills to build successful careers in technology.</p>
+                  <div class="social-links">
+                        <a href="https://www.facebook.com/share/18pPpK4Fqe/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaLkBaU3LdQdb07EJs2D"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/infyskill-edutech/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infyskill_edutech?igsh=MmNzMWRzeGMxaHA3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@infyskill_edutech?si=cP0JuKxSKuO-zLFF"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="courses">Courses</a></li>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact">Contact Us</a></li>
+        
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="verify">Verify Certificate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                       <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</li>
+                        <li><i class="fas fa-phone"></i> +91 9080087187</li>
+                        <li><i class="fas fa-phone"></i> +91 9347140822</li>
+                        <li><i class="fas fa-envelope"></i>  infyskilledutech@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 InfySkill. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

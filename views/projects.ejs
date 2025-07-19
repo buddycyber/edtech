@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Year Projects - InfySkill</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">InfySkill</a>
+            <div class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Learn With Us <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="courses">Our Courses</a></li>
+                        <li><a href="workshops">Our Workshops</a></li>
+                        <li><a href="webinars">Our Webinars</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects" class="active">Final Year Projects</a></li>
+                <li><a href="verify">Verify Certificate</a></li>
+                <li><a href="careers">Careers</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                      <li><a href="login" class="btn btn-login" id="loginBtn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <div class="container">
+            <h1>Final Year Projects</h1>
+            <p>Innovative project ideas to showcase your skills</p>
+            <br><br>
+            <p><b>Turning ideas into impact — one final project at a time. Your journey, your creation, your legacy</b></p>
+            <br>
+            <p><b>From late nights to bright ideas — here’s where final year dreams come to life!</b></p>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All Projects</button>
+                <button class="tab-btn" data-category="cs">Computer Science</button>
+                <button class="tab-btn" data-category="it">Information Technology</button>
+                <button class="tab-btn" data-category="ai">AI/ML</button>
+                <button class="tab-btn" data-category="web">Web Development</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid">
+        <div class="container">
+            <div class="projects-container">
+                <!-- CS Projects -->
+                <div class="project-card" data-category="cs">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?blockchain" alt="Project">
+                        <span class="difficulty intermediate">Intermediate</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Blockchain-based Voting System</h3>
+                        <p>A secure and transparent online voting system using blockchain technology to prevent fraud and ensure anonymity.</p>
+                        <div class="project-tech">
+                            <span>Blockchain</span>
+                            <span>Solidity</span>
+                            <span>Web3.js</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="cs">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?compiler" alt="Project">
+                        <span class="difficulty advanced">Advanced</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mini Programming Language Compiler</h3>
+                        <p>Design and implement a compiler for a custom programming language including lexer, parser, and code generator.</p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Lex/Yacc</span>
+                            <span>Compiler Design</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <!-- IT Projects -->
+                <div class="project-card" data-category="it">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?network" alt="Project">
+                        <span class="difficulty intermediate">Intermediate</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Network Traffic Analyzer</h3>
+                        <p>Monitor and analyze network traffic patterns to detect anomalies and potential security threats in real-time.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Wireshark</span>
+                            <span>Network Security</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="it">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?database" alt="Project">
+                        <span class="difficulty beginner">Beginner</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Library Management System</h3>
+                        <p>A comprehensive system to manage library operations including book tracking, member management, and reports.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>MySQL</span>
+                            <span>Swing</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <!-- AI/ML Projects -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?face,recognition" alt="Project">
+                        <span class="difficulty advanced">Advanced</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Emotion Recognition System</h3>
+                        <p>Real-time facial emotion detection using deep learning to analyze human emotions from video streams.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>TensorFlow</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?chatbot" alt="Project">
+                        <span class="difficulty intermediate">Intermediate</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot for Education</h3>
+                        <p>An intelligent chatbot that answers student queries about courses, schedules, and campus information.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLTK</span>
+                            <span>Dialogflow</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <!-- Web Dev Projects -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?ecommerce" alt="Project">
+                        <span class="difficulty intermediate">Intermediate</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce Platform</h3>
+                        <p>A full-featured online store with product catalog, shopping cart, user accounts, and payment integration.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://source.unsplash.com/random/400x250/?social,media" alt="Project">
+                        <span class="difficulty advanced">Advanced</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Social Media Dashboard</h3>
+                        <p>Analytics dashboard that aggregates data from multiple social platforms and provides insights.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>D3.js</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Guidance -->
+    <section class="project-guidance">
+        <div class="container">
+            <h2 class="section-title">Need Project Guidance?</h2>
+            <div class="guidance-content">
+                <div class="guidance-text">
+                    <p>Our experts can help you with:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Project idea selection based on your skills</li>
+                        <li><i class="fas fa-check"></i> Technical implementation guidance</li>
+                        <li><i class="fas fa-check"></i> Documentation and presentation support</li>
+                        <li><i class="fas fa-check"></i> Deployment and testing assistance</li>
+                    </ul>
+                    <a href="contact" class="btn btn-primary">Get Help Now</a>
+                </div>
+                <div class="guidance-image">
+                    <img src="https://source.unsplash.com/random/500x350/?mentor" alt="Project Guidance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>InfySkill</h3>
+                    <p>Empowering students with industry-relevant skills to build successful careers in technology.</p>
+      <div class="social-links">
+                        <a href="https://www.facebook.com/share/18pPpK4Fqe/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaLkBaU3LdQdb07EJs2D"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/company/infyskill-edutech/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/infyskill_edutech?igsh=MmNzMWRzeGMxaHA3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@infyskill_edutech?si=cP0JuKxSKuO-zLFF"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="courses">Courses</a></li>
+                        <li><a href="projects">Projects</a></li>
+                        <li><a href="careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact">Contact Us</a></li>
+             
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="verify">Verify Certificate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                  <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Park, Bangalore, India</li>
+                        <li><i class="fas fa-phone"></i> +91 9080087187</li>
+                        <li><i class="fas fa-phone"></i> +91 9347140822</li>
+                        <li><i class="fas fa-envelope"></i>  infyskilledutech@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 InfySkill. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
